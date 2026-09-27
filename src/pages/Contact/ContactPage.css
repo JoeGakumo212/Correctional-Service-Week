@@ -1,0 +1,1224 @@
+/* =========================================================
+   CORRECTIONAL SERVICE WEEK 2026
+   CONTACT SECTION
+   Shared styles:
+   ContactPage
+   VenuePage
+   HotelsPage
+   FAQPage
+   ========================================================= */
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+.contact-page,
+.venue-page,
+.hotels-page,
+.faq-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #17211b;
+  overflow-x: hidden;
+}
+
+.contact-page *,
+.contact-page *::before,
+.contact-page *::after,
+.venue-page *,
+.venue-page *::before,
+.venue-page *::after,
+.hotels-page *,
+.hotels-page *::before,
+.hotels-page *::after,
+.faq-page *,
+.faq-page *::before,
+.faq-page *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   SHARED CONTAINERS
+   ========================================================= */
+
+.contact-container,
+.venue-container,
+.hotels-container,
+.faq-container {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   SHARED HERO
+   ========================================================= */
+
+.contact-hero,
+.venue-hero,
+.hotels-hero,
+.faq-hero {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(9, 35, 23, 0.96) 0%,
+      rgba(9, 35, 23, 0.88) 48%,
+      rgba(9, 35, 23, 0.62) 100%
+    ),
+    url('/images/image4.jpeg') center / cover no-repeat;
+}
+
+.contact-hero::after,
+.venue-hero::after,
+.hotels-hero::after,
+.faq-hero::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 90px;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.08), transparent);
+  pointer-events: none;
+}
+
+.contact-hero .contact-container,
+.venue-hero .venue-container,
+.hotels-hero .hotels-container,
+.faq-hero .faq-container {
+  position: relative;
+  z-index: 1;
+  padding: 90px 0;
+}
+
+.contact-eyebrow,
+.venue-eyebrow,
+.hotels-eyebrow,
+.faq-eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.contact-hero h1,
+.venue-hero h1,
+.hotels-hero h1,
+.faq-hero h1 {
+  max-width: 900px;
+  margin: 0;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  color: #ffffff;
+}
+
+.contact-hero h1 span,
+.venue-hero h1 span,
+.hotels-hero h1 span,
+.faq-hero h1 span {
+  color: #d5ad55;
+}
+
+.contact-hero p,
+.venue-hero p,
+.hotels-hero p,
+.faq-hero p {
+  max-width: 700px;
+  margin: 28px 0 0;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* =========================================================
+   SHARED KICKER
+   ========================================================= */
+
+.contact-kicker,
+.venue-kicker,
+.hotels-kicker,
+.faq-kicker {
+  display: inline-block;
+  margin-bottom: 13px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: #8a6a27;
+}
+
+/* =========================================================
+   CONTACT PAGE
+   ========================================================= */
+
+.contact-intro {
+  padding: 90px 0 75px;
+  background: #ffffff;
+}
+
+.contact-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 80px;
+  align-items: end;
+}
+
+.contact-intro h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  font-weight: 750;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: #18231c;
+}
+
+.contact-intro-grid > p {
+  max-width: 650px;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.85;
+  color: #667068;
+}
+
+/* Contact information */
+
+.contact-information {
+  padding: 80px 0 100px;
+  background: #f4f6f3;
+}
+
+.contact-section-heading {
+  margin-bottom: 38px;
+}
+
+.contact-section-heading h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 750;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: #18231c;
+}
+
+.contact-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.contact-card {
+  min-height: 260px;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #e0e5e0;
+  border-radius: 4px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  border-color: #cbd4cc;
+  box-shadow: 0 18px 45px rgba(20, 35, 26, 0.08);
+}
+
+.contact-card-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  border-radius: 50%;
+  background: #edf2ed;
+  color: #315c43;
+}
+
+.contact-card > span {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8a6a27;
+}
+
+.contact-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.08rem;
+  line-height: 1.4;
+  color: #1b281f;
+}
+
+.contact-card p,
+.contact-card a {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #69726b;
+}
+
+.contact-card a {
+  color: #315c43;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+/* Contact guidance */
+
+.contact-guidance {
+  padding: 0 0 100px;
+  background: #f4f6f3;
+}
+
+.contact-guidance-box {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 50px;
+  align-items: center;
+  padding: 50px;
+  background: #182d21;
+  border-radius: 4px;
+}
+
+.contact-guidance-box .contact-kicker {
+  color: #d5ad55;
+}
+
+.contact-guidance-box h2 {
+  max-width: 680px;
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  color: #ffffff;
+}
+
+.contact-guidance-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 260px;
+}
+
+.contact-guidance-links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  min-height: 48px;
+  padding: 0 16px;
+  border: 1px solid rgba(213, 173, 85, 0.45);
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 750;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.contact-guidance-links a:hover {
+  background: rgba(213, 173, 85, 0.12);
+  border-color: #d5ad55;
+}
+
+/* =========================================================
+   VENUE PAGE
+   ========================================================= */
+
+.venue-main {
+  padding: 80px 0 100px;
+  background: #ffffff;
+}
+
+.venue-back-link,
+.faq-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 45px;
+  color: #315c43;
+  font-size: 0.84rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.venue-back-link:hover,
+.faq-back-link:hover {
+  gap: 11px;
+}
+
+.venue-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 55px;
+  align-items: stretch;
+}
+
+.venue-details {
+  padding: 20px 0;
+}
+
+.venue-details h2 {
+  margin: 0 0 22px;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: #18231c;
+}
+
+.venue-address {
+  margin: 0 0 22px;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.7;
+  color: #315c43;
+}
+
+.venue-details > p:not(.venue-address) {
+  max-width: 600px;
+  margin: 0 0 28px;
+  font-size: 0.96rem;
+  line-height: 1.8;
+  color: #69726b;
+}
+
+.venue-map-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 46px;
+  padding: 0 20px;
+  border-radius: 3px;
+  background: #315c43;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.venue-map-button:hover {
+  transform: translateY(-2px);
+  background: #244934;
+}
+
+.venue-map {
+  min-height: 480px;
+  overflow: hidden;
+  border: 1px solid #dfe5df;
+  border-radius: 4px;
+  background: #e8ece8;
+}
+
+.venue-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  display: block;
+  border: 0;
+}
+
+/* Venue directions */
+
+.venue-directions {
+  padding: 90px 0 100px;
+  background: #f4f6f3;
+}
+
+.venue-section-heading {
+  margin-bottom: 38px;
+}
+
+.venue-section-heading h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: #18231c;
+}
+
+.venue-direction-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.venue-direction-card {
+  min-height: 290px;
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid #e0e5e0;
+  border-radius: 4px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.venue-direction-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 45px rgba(20, 35, 26, 0.08);
+}
+
+.venue-direction-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 27px;
+  border-radius: 50%;
+  background: #edf2ed;
+  color: #315c43;
+}
+
+.venue-direction-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.2rem;
+  color: #1b281f;
+}
+
+.venue-direction-card p {
+  margin: 0;
+  font-size: 0.91rem;
+  line-height: 1.75;
+  color: #69726b;
+}
+
+/* Venue notice */
+
+.venue-notice {
+  padding: 0 0 100px;
+  background: #f4f6f3;
+}
+
+.venue-notice-box {
+  padding: 50px;
+  text-align: center;
+  background: #182d21;
+  border-radius: 4px;
+}
+
+.venue-notice-box .venue-kicker {
+  color: #d5ad55;
+}
+
+.venue-notice-box h2 {
+  margin: 0 0 17px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.venue-notice-box p {
+  max-width: 780px;
+  margin: 0 auto 28px;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.venue-notice-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 46px;
+  padding: 0 20px;
+  border-radius: 3px;
+  background: #d5ad55;
+  color: #17211b;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* =========================================================
+   HOTELS PAGE
+   ========================================================= */
+
+.hotels-intro {
+  padding: 90px 0 75px;
+  background: #ffffff;
+}
+
+.hotels-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 80px;
+  align-items: end;
+}
+
+.hotels-intro h2 {
+  margin: 0;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+  color: #18231c;
+}
+
+.hotels-intro-grid > p {
+  max-width: 650px;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.85;
+  color: #69726b;
+}
+
+.hotels-list {
+  padding: 80px 0 100px;
+  background: #f4f6f3;
+}
+
+.hotels-section-heading {
+  margin-bottom: 38px;
+}
+
+.hotels-section-heading h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: #18231c;
+}
+
+.hotels-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.hotel-card {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e0e5e0;
+  border-radius: 4px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.hotel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 45px rgba(20, 35, 26, 0.09);
+}
+
+.hotel-card-image {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #182d21, #315c43);
+  color: #d5ad55;
+}
+
+.hotel-card-content {
+  padding: 27px;
+}
+
+.hotel-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8a6a27;
+}
+
+.hotel-card h3 {
+  margin: 0 0 5px;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  color: #1b281f;
+}
+
+.hotel-distance {
+  margin: 0 0 17px;
+  font-size: 0.8rem;
+  font-weight: 650;
+  color: #8b938d;
+}
+
+.hotel-description {
+  min-height: 85px;
+  margin: 0 0 22px;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #69726b;
+}
+
+.hotel-book-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 17px;
+  border: 1px solid #315c43;
+  border-radius: 3px;
+  color: #315c43;
+  font-size: 0.81rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.hotel-book-button:hover {
+  background: #315c43;
+  color: #ffffff;
+}
+
+/* Hotels guide */
+
+.hotels-guide {
+  padding: 90px 0;
+  background: #ffffff;
+}
+
+.hotels-guide-grid {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hotels-guide-icon {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #edf2ed;
+  color: #315c43;
+}
+
+.hotels-guide h2 {
+  margin: 0 0 15px;
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  line-height: 1.1;
+  color: #18231c;
+}
+
+.hotels-guide p {
+  max-width: 750px;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #69726b;
+}
+
+/* Airport */
+
+.hotels-airport {
+  padding: 0 0 100px;
+  background: #ffffff;
+}
+
+.hotels-airport-box {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: center;
+  padding: 42px;
+  background: #182d21;
+  border-radius: 4px;
+}
+
+.hotels-airport-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(213, 173, 85, 0.4);
+  border-radius: 50%;
+  color: #d5ad55;
+}
+
+.hotels-airport-box .hotels-kicker {
+  color: #d5ad55;
+}
+
+.hotels-airport-box h2 {
+  margin: 0;
+  font-size: 1.55rem;
+  line-height: 1.3;
+  color: #ffffff;
+}
+
+.hotels-airport-box p {
+  max-width: 680px;
+  margin: 10px 0 0;
+  font-size: 0.91rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.hotels-airport-box > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 0 18px;
+  border-radius: 3px;
+  background: #d5ad55;
+  color: #17211b;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   FAQ PAGE
+   ========================================================= */
+
+.faq-section {
+  padding: 80px 0 100px;
+  background: #ffffff;
+}
+
+.faq-heading {
+  max-width: 800px;
+  margin-bottom: 50px;
+}
+
+.faq-heading h2 {
+  margin: 0 0 18px;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+  color: #18231c;
+}
+
+.faq-heading > p {
+  max-width: 700px;
+  margin: 0;
+  font-size: 0.97rem;
+  line-height: 1.8;
+  color: #69726b;
+}
+
+.faq-list {
+  max-width: 920px;
+  border-top: 1px solid #dfe5df;
+}
+
+.faq-item {
+  border-bottom: 1px solid #dfe5df;
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 25px 5px;
+  border: 0;
+  background: transparent;
+  color: #18231c;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 750;
+  line-height: 1.5;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq-chevron {
+  flex-shrink: 0;
+  color: #8a6a27;
+  transition: transform 0.25s ease;
+}
+
+.faq-item.open .faq-chevron {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.faq-answer p {
+  overflow: hidden;
+  margin: 0;
+  font-size: 0.93rem;
+  line-height: 1.8;
+  color: #69726b;
+}
+
+.faq-item.open .faq-answer {
+  grid-template-rows: 1fr;
+}
+
+.faq-item.open .faq-answer p {
+  padding: 0 45px 25px 5px;
+}
+
+/* FAQ contact */
+
+.faq-contact {
+  padding: 0 0 100px;
+  background: #ffffff;
+}
+
+.faq-contact-box {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: center;
+  padding: 42px;
+  background: #182d21;
+  border-radius: 4px;
+}
+
+.faq-contact-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(213, 173, 85, 0.4);
+  border-radius: 50%;
+  color: #d5ad55;
+}
+
+.faq-contact-box .faq-kicker {
+  color: #d5ad55;
+}
+
+.faq-contact-box h2 {
+  margin: 0;
+  font-size: 1.55rem;
+  color: #ffffff;
+}
+
+.faq-contact-box p {
+  max-width: 650px;
+  margin: 9px 0 0;
+  font-size: 0.91rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.faq-contact-box > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 20px;
+  border-radius: 3px;
+  background: #d5ad55;
+  color: #17211b;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   FOCUS STATES
+   ========================================================= */
+
+.contact-page a:focus-visible,
+.contact-page button:focus-visible,
+.venue-page a:focus-visible,
+.hotels-page a:focus-visible,
+.faq-page a:focus-visible,
+.faq-page button:focus-visible {
+  outline: 3px solid rgba(213, 173, 85, 0.65);
+  outline-offset: 4px;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .contact-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hotels-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 960px) {
+  .contact-container,
+  .venue-container,
+  .hotels-container,
+  .faq-container {
+    width: min(100% - 40px, 760px);
+  }
+
+  .contact-intro-grid,
+  .hotels-intro-grid,
+  .venue-layout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .contact-guidance-box {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contact-guidance-links {
+    max-width: 500px;
+  }
+
+  .venue-map,
+  .venue-map iframe {
+    min-height: 420px;
+  }
+
+  .venue-direction-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hotels-airport-box,
+  .faq-contact-box {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .hotels-airport-box > a,
+  .faq-contact-box > a {
+    grid-column: 2;
+    width: fit-content;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 680px) {
+  .contact-container,
+  .venue-container,
+  .hotels-container,
+  .faq-container {
+    width: min(100% - 32px, 560px);
+  }
+
+  .contact-hero,
+  .venue-hero,
+  .hotels-hero,
+  .faq-hero {
+    min-height: 390px;
+  }
+
+  .contact-hero .contact-container,
+  .venue-hero .venue-container,
+  .hotels-hero .hotels-container,
+  .faq-hero .faq-container {
+    padding: 70px 0;
+  }
+
+  .contact-hero h1,
+  .venue-hero h1,
+  .hotels-hero h1,
+  .faq-hero h1 {
+    font-size: clamp(2.7rem, 13vw, 4rem);
+  }
+
+  .contact-hero p,
+  .venue-hero p,
+  .hotels-hero p,
+  .faq-hero p {
+    margin-top: 22px;
+    font-size: 0.96rem;
+    line-height: 1.7;
+  }
+
+  /* Contact */
+
+  .contact-intro,
+  .hotels-intro {
+    padding: 65px 0 55px;
+  }
+
+  .contact-intro h2,
+  .hotels-intro h2,
+  .faq-heading h2 {
+    font-size: 2rem;
+  }
+
+  .contact-information {
+    padding: 65px 0 75px;
+  }
+
+  .contact-card-grid,
+  .venue-direction-grid,
+  .hotels-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    min-height: auto;
+    padding: 27px;
+  }
+
+  .contact-guidance {
+    padding-bottom: 70px;
+  }
+
+  .contact-guidance-box {
+    padding: 35px 25px;
+  }
+
+  .contact-guidance-box h2 {
+    font-size: 2rem;
+  }
+
+  .contact-guidance-links {
+    min-width: 0;
+    width: 100%;
+  }
+
+  /* Venue */
+
+  .venue-main,
+  .faq-section {
+    padding: 65px 0 75px;
+  }
+
+  .venue-back-link,
+  .faq-back-link {
+    margin-bottom: 35px;
+  }
+
+  .venue-details h2 {
+    font-size: 2.25rem;
+  }
+
+  .venue-map,
+  .venue-map iframe {
+    min-height: 350px;
+  }
+
+  .venue-directions {
+    padding: 65px 0 75px;
+  }
+
+  .venue-section-heading h2,
+  .hotels-section-heading h2 {
+    font-size: 2rem;
+  }
+
+  .venue-direction-card {
+    min-height: auto;
+    padding: 27px;
+  }
+
+  .venue-notice {
+    padding-bottom: 70px;
+  }
+
+  .venue-notice-box {
+    padding: 38px 24px;
+  }
+
+  .venue-notice-box h2 {
+    font-size: 2rem;
+  }
+
+  /* Hotels */
+
+  .hotels-list {
+    padding: 65px 0 75px;
+  }
+
+  .hotel-card-content {
+    padding: 25px;
+  }
+
+  .hotel-description {
+    min-height: auto;
+  }
+
+  .hotels-guide {
+    padding: 70px 0;
+  }
+
+  .hotels-guide-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .hotels-airport {
+    padding-bottom: 70px;
+  }
+
+  .hotels-airport-box {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 30px 25px;
+  }
+
+  .hotels-airport-box > a {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  /* FAQ */
+
+  .faq-heading {
+    margin-bottom: 35px;
+  }
+
+  .faq-question {
+    padding: 21px 2px;
+    font-size: 0.93rem;
+  }
+
+  .faq-item.open .faq-answer p {
+    padding: 0 25px 23px 2px;
+  }
+
+  .faq-contact {
+    padding-bottom: 70px;
+  }
+
+  .faq-contact-box {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 30px 25px;
+  }
+
+  .faq-contact-box > a {
+    grid-column: auto;
+    width: 100%;
+  }
+}

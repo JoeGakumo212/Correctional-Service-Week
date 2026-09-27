@@ -1,0 +1,424 @@
+/* =========================================================
+   CORRECTIONAL SERVICE WEEK 2026
+   LEADERSHIP
+   ========================================================= */
+
+.leadership-page {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #ffffff;
+}
+
+.leadership-page *,
+.leadership-page *::before,
+.leadership-page *::after {
+  box-sizing: border-box;
+}
+
+.leadership-page .container {
+  width: min(1180px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.leadership-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 85px 0;
+  background: #ffffff;
+  border-bottom: 1px solid #e6ece8;
+}
+
+.leadership-hero::after {
+  content: '';
+  position: absolute;
+  right: -160px;
+  bottom: -250px;
+  width: 650px;
+  height: 650px;
+  border: 1px solid rgba(70, 120, 200, 0.08);
+  border-radius: 50%;
+}
+
+.leadership-hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.leadership-hero-copy {
+  flex: 1;
+}
+
+.leadership-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 18px;
+  color: #176847;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.leadership-eyebrow::before {
+  content: '';
+  width: 30px;
+  height: 3px;
+  background: #efc15b;
+}
+
+.leadership-hero h1 {
+  margin: 0 0 20px;
+  color: #176847;
+  font-size: clamp(3rem, 6vw, 5.1rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.leadership-hero h1 span {
+  color: #e52329;
+}
+
+.leadership-hero p {
+  max-width: 720px;
+  margin: 0;
+  color: #596960;
+  font-size: 1.08rem;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   LEADERSHIP SECTION
+   ========================================================= */
+
+.leadership-section {
+  padding: 90px 0;
+}
+
+.leadership-heading {
+  max-width: 760px;
+  margin-bottom: 50px;
+}
+
+.leadership-label {
+  margin: 0 0 12px;
+  color: #e52329;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.leadership-heading h2 {
+  margin: 0 0 15px;
+  color: #176847;
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  line-height: 1.1;
+}
+
+.leadership-heading p {
+  margin: 0;
+  color: #68776f;
+  line-height: 1.8;
+}
+
+/* =========================================================
+   LEADERSHIP CARDS
+   ========================================================= */
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.leadership-card {
+  overflow: hidden;
+  border: 1px solid #dfe8e3;
+  border-radius: 18px;
+  background: #ffffff;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.leadership-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(23, 104, 71, 0.1);
+}
+
+.leadership-photo {
+  position: relative;
+  aspect-ratio: 4 / 4.7;
+  overflow: hidden;
+  background: #edf3ef;
+}
+
+.leadership-photo::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  z-index: 2;
+  background: linear-gradient(
+    90deg,
+    #176847 0 25%,
+    #f4df00 25% 50%,
+    #e52329 50% 75%,
+    #4678c8 75% 100%
+  );
+}
+
+.leadership-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.leadership-photo-placeholder {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #729083;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.leadership-info {
+  padding: 23px 21px 26px;
+}
+
+.leadership-info h3 {
+  margin: 0 0 8px;
+  color: #176847;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.leadership-role {
+  margin: 0 0 4px;
+  color: #e52329;
+  font-size: 0.84rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.leadership-institution {
+  margin: 0;
+  color: #738078;
+  font-size: 0.83rem;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   PARTNERS
+   ========================================================= */
+
+.partners-section {
+  padding: 90px 0;
+  background: #f7f9f8;
+  border-top: 1px solid #e5ebe7;
+}
+
+.partners-heading {
+  max-width: 720px;
+  margin-bottom: 45px;
+}
+
+.partners-heading h2 {
+  margin: 0 0 14px;
+  color: #176847;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.partners-heading p {
+  margin: 0;
+  color: #68776f;
+  line-height: 1.8;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.partner-card {
+  min-height: 145px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  border: 1px solid #dfe8e3;
+  border-radius: 16px;
+  background: #ffffff;
+  text-align: center;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(23, 104, 71, 0.08);
+}
+
+.partner-card span {
+  color: #176847;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+[data-theme='dark'] .leadership-page {
+  background: #101a16;
+}
+
+[data-theme='dark'] .leadership-hero,
+[data-theme='dark'] .leadership-section {
+  background: #101a16;
+}
+
+[data-theme='dark'] .leadership-hero h1,
+[data-theme='dark'] .leadership-heading h2,
+[data-theme='dark'] .partners-heading h2,
+[data-theme='dark'] .leadership-info h3 {
+  color: #7ed0a8;
+}
+
+[data-theme='dark'] .leadership-hero p,
+[data-theme='dark'] .leadership-heading p,
+[data-theme='dark'] .partners-heading p,
+[data-theme='dark'] .leadership-institution {
+  color: #aab8b1;
+}
+
+[data-theme='dark'] .leadership-card,
+[data-theme='dark'] .partner-card {
+  background: #17231e;
+  border-color: #2a3a32;
+}
+
+[data-theme='dark'] .partners-section {
+  background: #121e19;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .leadership-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .leadership-page .container {
+    width: min(100% - 36px, 1180px);
+  }
+
+  .leadership-hero {
+    padding: 70px 0;
+  }
+
+  .leadership-hero-content {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 620px) {
+  .leadership-page .container {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .leadership-hero-content {
+    display: block;
+  }
+
+  .leadership-hero .event-motif {
+    margin-bottom: 5px;
+    transform: scale(0.6);
+    transform-origin: left center;
+  }
+
+  .leadership-hero h1 {
+    font-size: 2.7rem;
+  }
+
+  .leadership-section,
+  .partners-section {
+    padding: 70px 0;
+  }
+
+  .leadership-grid,
+  .partners-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================================================
+   THEME STRIP
+   ========================================================= */
+
+.theme-strip {
+  padding: 22px 0;
+  background: #176847;
+}
+
+.theme-strip-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.theme-label {
+  padding: 7px 20px;
+  border-radius: 30px;
+  background: #ffffff;
+  color: #176847;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.theme-text {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+@media (max-width: 620px) {
+  .theme-strip-inner {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .theme-text {
+    font-size: 0.9rem;
+  }
+}

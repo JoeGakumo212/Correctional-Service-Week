@@ -1,0 +1,75 @@
+/* =========================================================
+   CORRECTIONAL SERVICE WEEK 2026
+   FLOATING SCROLL TO TOP
+   ========================================================= */
+
+.scroll-to-top {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+
+  background: #123c2b;
+  color: #ffffff;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+
+  z-index: 9999;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-4px);
+
+  background: #a88932;
+
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+}
+
+.scroll-to-top:active {
+  transform: translateY(-1px);
+}
+
+.scroll-to-top:focus-visible {
+  outline: 3px solid rgba(168, 137, 50, 0.45);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .scroll-to-top {
+    right: 18px;
+    bottom: 18px;
+
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroll-to-top {
+    right: 15px;
+    bottom: 15px;
+
+    width: 40px;
+    height: 40px;
+  }
+}

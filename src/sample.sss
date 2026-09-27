@@ -1,0 +1,458 @@
+import { useEffect, useState } from 'react';
+import {
+  ArrowRight,
+  CalendarDays,
+  ChevronDown,
+  Eye,
+  Heart,
+  GraduationCap,
+  MapPin,
+  Menu,
+  ShieldCheck,
+  Users,
+  X,
+  Settings,
+  Trophy,
+  Sprout,
+} from 'lucide-react';
+import './index.css';
+
+const focusAreas = [
+  { icon: Users, title: 'Community', subtitle: 'Engagement' },
+  { icon: GraduationCap, title: 'Rehabilitation', subtitle: '& Reintegration' },
+  { icon: ShieldCheck, title: 'Security &', subtitle: 'Safety' },
+  { icon: Settings, title: 'Innovation &', subtitle: 'Digital Transformation' },
+  { icon: Heart, title: 'Staff Welfare', subtitle: '& Recognition' },
+];
+
+const highlights = [
+  {
+    icon: CalendarDays,
+    title: 'Exhibitions & Innovation Fair',
+    description: 'Showcasing ICT, skills and rehabilitation programs',
+  },
+  {
+    icon: Users,
+    title: 'Panel Discussions',
+    description: 'Insights from leaders and experts',
+  },
+  {
+    icon: Trophy,
+    title: 'Sports & Wellness',
+    description: 'Building a healthy and united team',
+  },
+  {
+    icon: Sprout,
+    title: 'Community Outreach',
+    description: 'Joining hands for a better tomorrow',
+  },
+];
+
+function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  useEffect(() => {
+    // Update this date when the official event date is confirmed.
+    const eventDate = new Date('2026-10-12T09:00:00+03:00');
+
+    const updateCountdown = () => {
+      const difference = eventDate.getTime() - Date.now();
+
+      if (difference <= 0) {
+        setTimeLeft({
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0,
+        });
+        return;
+      }
+
+      setTimeLeft({
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / (1000 * 60)) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      });
+    };
+
+    updateCountdown();
+    const timer = setInterval(updateCountdown, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: 'smooth',
+    });
+    setMenuOpen(false);
+  };
+
+  return (
+    <div className="app">
+      {/* NAVIGATION */}
+      <header className="navbar">
+        <div className="container nav-container">
+          <a href="#home" className="brand" onClick={() => setMenuOpen(false)}>
+            <img
+              src="/images/crest.png"
+              alt="Government crest"
+              className="crest"
+            />
+
+            <div className="brand-text">
+              <strong>
+                STATE DEPARTMENT
+                <br />
+                FOR CORRECTIONAL SERVICES
+              </strong>
+              <span>Rehabilitation • Security • A Safer Society</span>
+            </div>
+          </a>
+
+          <button
+            className="mobile-toggle"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle navigation"
+          >
+            {menuOpen ? <X /> : <Menu />}
+          </button>
+
+          <nav className={`nav-links ${menuOpen ? 'open' : ''}`}>
+            {[
+              'Home',
+              'About',
+              'Events',
+              'Programs',
+              'Gallery',
+              'News',
+              'Contact',
+            ].map((item) => (
+              <a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                onClick={() => setMenuOpen(false)}
+              >
+                {item}
+              </a>
+            ))}
+
+            <button
+              className="register-button"
+              onClick={() => scrollToSection('contact')}
+            >
+              <CalendarDays size={17} />
+              Register / RSVP
+            </button>
+          </nav>
+        </div>
+      </header>
+
+      {/* HERO */}
+      <section className="hero" id="home">
+        <div className="hero-overlay"></div>
+
+        <div className="container hero-content">
+          <div className="hero-copy">
+            <div className="eyebrow light">
+              <span></span>
+              WELCOME TO
+            </div>
+
+            <h1>
+              CORRECTIONAL
+              <br />
+              SERVICE WEEK <span>2026</span>
+            </h1>
+
+            <p className="hero-subtitle">
+              Celebrating Service, Promoting Rehabilitation,
+              <br />
+              Building a Safer Kenya
+            </p>
+
+            <div className="event-meta">
+              <div className="meta-item">
+                <CalendarDays />
+                <div>
+                  <small>Date</small>
+                  <strong>12 – 16 Oct 2026</strong>
+                </div>
+              </div>
+
+              <div className="meta-item">
+                <MapPin />
+                <div>
+                  <small>Venue</small>
+                  <strong>
+                    Kenya School of Government,
+                    <br />
+                    Nairobi
+                  </strong>
+                </div>
+              </div>
+              <img src="." alt="" />
+              <div className="meta-item">
+                <Users />
+                <div>
+                  <small>Theme</small>
+                  <strong>
+                    Rehabilitation for a
+                    <br />
+                    Safer Tomorrow
+                  </strong>
+                </div>
+              </div>
+            </div>
+
+            <div className="hero-actions">
+              <button
+                className="button button-yellow"
+                onClick={() => scrollToSection('events')}
+              >
+                Explore Events
+                <ArrowRight size={19} />
+              </button>
+
+              <button
+                className="button button-outline"
+                onClick={() => scrollToSection('programs')}
+              >
+                <Eye size={18} />
+                View Program
+              </button>
+            </div>
+          </div>
+
+          {/* COUNTDOWN */}
+          <div className="countdown-card">
+            <h3>EVENT STARTS IN</h3>
+
+            <div className="countdown-grid">
+              {[
+                ['days', 'Days'],
+                ['hours', 'Hours'],
+                ['minutes', 'Minutes'],
+                ['seconds', 'Seconds'],
+              ].map(([key, label]) => (
+                <div className="countdown-item" key={key}>
+                  <strong>{String(timeLeft[key]).padStart(2, '0')}</strong>
+                  <span>{label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FOCUS AREAS */}
+      <section className="focus-section">
+        <div className="container focus-grid">
+          {focusAreas.map(({ icon: Icon, title, subtitle }) => (
+            <div className="focus-item" key={title}>
+              <Icon />
+              <div>
+                <strong>{title}</strong>
+                <span>{subtitle}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section className="about-section" id="about">
+        <div className="container about-grid">
+          <div className="about-copy">
+            <div className="eyebrow">
+              <span></span>
+              ABOUT THE EVENT
+            </div>
+
+            <h2>Correctional Service Week</h2>
+
+            <p>
+              Correctional Service Week is an annual event that brings together
+              staff, partners, stakeholders and the community to celebrate
+              achievements, promote rehabilitation, share knowledge and
+              strengthen partnerships for a safer and more just society.
+            </p>
+
+            <button
+              className="button button-green"
+              onClick={() => scrollToSection('events')}
+            >
+              Learn More About Us
+              <ArrowRight size={18} />
+            </button>
+          </div>
+
+          <div className="about-image">
+            <img
+              src="/images/correctional-building.jpg"
+              alt="Correctional Services building"
+            />
+          </div>
+
+          <div className="highlights">
+            <div className="eyebrow">
+              <span></span>
+              EVENT HIGHLIGHTS
+            </div>
+
+            {highlights.map(({ icon: Icon, title, description }) => (
+              <div className="highlight-item" key={title}>
+                <Icon />
+                <div>
+                  <h3>{title}</h3>
+                  <p>{description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* EVENTS */}
+      <section className="events-section" id="events">
+        <div className="container section-heading">
+          <div className="eyebrow">
+            <span></span>
+            JOIN US
+          </div>
+          <h2>Celebrate Service Together</h2>
+          <p>
+            Discover activities, programs and opportunities during Correctional
+            Service Week 2026.
+          </p>
+        </div>
+
+        <div className="container event-cards">
+          <article className="event-card">
+            <CalendarDays />
+            <h3>Official Events</h3>
+            <p>View the official activities and scheduled engagements.</p>
+            <button onClick={() => scrollToSection('programs')}>
+              View Programs <ArrowRight size={16} />
+            </button>
+          </article>
+
+          <article className="event-card">
+            <Users />
+            <h3>Community Engagement</h3>
+            <p>Learn about outreach and stakeholder engagement activities.</p>
+            <button onClick={() => scrollToSection('contact')}>
+              Get Involved <ArrowRight size={16} />
+            </button>
+          </article>
+
+          <article className="event-card">
+            <ShieldCheck />
+            <h3>Innovation & Rehabilitation</h3>
+            <p>
+              Explore initiatives supporting rehabilitation and safer
+              communities.
+            </p>
+            <button onClick={() => scrollToSection('programs')}>
+              Learn More <ArrowRight size={16} />
+            </button>
+          </article>
+        </div>
+      </section>
+
+      {/* PROGRAMS */}
+      <section className="programs-section" id="programs">
+        <div className="container section-heading">
+          <div className="eyebrow">
+            <span></span>
+            PROGRAMS
+          </div>
+          <h2>Our Week at a Glance</h2>
+          <p>
+            Program details will be published through the official event
+            communication channels.
+          </p>
+        </div>
+
+        <div className="container program-list">
+          <div>
+            <span>12 OCT</span>
+            <h3>Opening Ceremony</h3>
+            <p>Official opening and stakeholder engagement.</p>
+          </div>
+          <div>
+            <span>13 OCT</span>
+            <h3>Innovation & Rehabilitation</h3>
+            <p>Exhibitions, demonstrations and discussions.</p>
+          </div>
+          <div>
+            <span>14 OCT</span>
+            <h3>Community Engagement</h3>
+            <p>Outreach and community-centered activities.</p>
+          </div>
+          <div>
+            <span>15–16 OCT</span>
+            <h3>Celebration & Closing</h3>
+            <p>Staff recognition, wellness and closing events.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT / RSVP */}
+      <section className="contact-section" id="contact">
+        <div className="container contact-box">
+          <div>
+            <div className="eyebrow light">
+              <span></span>
+              GET INVOLVED
+            </div>
+            <h2>Be Part of Correctional Service Week 2026</h2>
+            <p>
+              Connect with the event team for official program information and
+              participation details.
+            </p>
+          </div>
+
+          <button
+            className="button button-yellow"
+            onClick={() => alert('Registration form coming soon.')}
+          >
+            Register / RSVP
+            <ArrowRight size={18} />
+          </button>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="footer">
+        <div className="container footer-content">
+          <div>
+            <strong>State Department for Correctional Services</strong>
+            <p>Rehabilitation • Security • A Safer Society</p>
+          </div>
+
+          <div className="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#events">Events</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <div className="container copyright">
+          © 2026 State Department for Correctional Services. All rights
+          reserved.
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+export default App;

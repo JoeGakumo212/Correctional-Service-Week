@@ -1,0 +1,543 @@
+/* =========================================================
+   CORRECTIONAL SERVICE WEEK 2026
+   LATEST UPDATES PAGE
+   ========================================================= */
+
+.latest-updates-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #17211b;
+  overflow-x: hidden;
+}
+
+.latest-updates-page *,
+.latest-updates-page *::before,
+.latest-updates-page *::after {
+  box-sizing: border-box;
+}
+
+.latest-updates-container {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.latest-updates-hero {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(9, 35, 23, 0.96) 0%,
+      rgba(9, 35, 23, 0.88) 48%,
+      rgba(9, 35, 23, 0.62) 100%
+    ),
+    url('/images/image1.jpeg') center / cover no-repeat;
+}
+
+.latest-updates-hero::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 90px;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.08), transparent);
+  pointer-events: none;
+}
+
+.latest-updates-hero .latest-updates-container {
+  position: relative;
+  z-index: 1;
+  padding: 90px 0;
+}
+
+.latest-updates-eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.latest-updates-hero h1 {
+  max-width: 800px;
+  margin: 0;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  color: #ffffff;
+}
+
+.latest-updates-hero h1 span {
+  color: #d5ad55;
+}
+
+.latest-updates-hero p {
+  max-width: 680px;
+  margin: 28px 0 0;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.latest-updates-intro {
+  padding: 90px 0 75px;
+  background: #ffffff;
+}
+
+.latest-updates-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: 80px;
+  align-items: end;
+}
+
+.latest-updates-kicker {
+  display: inline-block;
+  margin-bottom: 13px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: #8a6a27;
+}
+
+.latest-updates-intro h2,
+.latest-updates-section-heading h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  font-weight: 750;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: #18231c;
+}
+
+.latest-updates-intro-grid > p {
+  margin: 0;
+  max-width: 650px;
+  font-size: 1rem;
+  line-height: 1.85;
+  color: #667068;
+}
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.latest-updates-section-heading {
+  margin-bottom: 38px;
+}
+
+.latest-updates-section-heading h2 {
+  max-width: 760px;
+}
+
+/* =========================================================
+   HIGHLIGHTS
+   ========================================================= */
+
+.latest-updates-highlights {
+  padding: 80px 0 100px;
+  background: #f4f6f3;
+}
+
+.latest-updates-highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.latest-updates-highlight-card {
+  min-height: 245px;
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid #e1e6e1;
+  border-radius: 4px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.latest-updates-highlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 45px rgba(24, 35, 28, 0.08);
+}
+
+.latest-updates-highlight-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  border-radius: 50%;
+  background: #eef2ed;
+  color: #315c43;
+}
+
+.latest-updates-highlight-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.22rem;
+  line-height: 1.3;
+  color: #1b281f;
+}
+
+.latest-updates-highlight-card p {
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.7;
+  color: #6a736c;
+}
+
+/* =========================================================
+   UPDATE LIST
+   ========================================================= */
+
+.latest-updates-list {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.latest-updates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.latest-update-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 360px;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #e0e5e0;
+  border-radius: 4px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.latest-update-card:hover {
+  transform: translateY(-5px);
+  border-color: #cbd4cc;
+  box-shadow: 0 18px 45px rgba(20, 35, 26, 0.08);
+}
+
+.latest-update-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 16px;
+}
+
+.latest-update-card-top span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background: #edf2ed;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #315c43;
+}
+
+.latest-update-card-top svg {
+  color: #9a7b35;
+}
+
+.latest-update-date {
+  margin: 0 0 18px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #8a918b;
+}
+
+.latest-update-card h3 {
+  margin: 0 0 15px;
+  font-size: 1.28rem;
+  font-weight: 750;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: #1b281f;
+}
+
+.latest-update-excerpt {
+  margin: 0;
+  font-size: 0.93rem;
+  line-height: 1.72;
+  color: #69726b;
+}
+
+.latest-update-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  margin-top: auto;
+  padding-top: 25px;
+  font-size: 0.86rem;
+  font-weight: 750;
+  color: #315c43;
+  text-decoration: none;
+  transition: gap 0.2s ease;
+}
+
+.latest-update-link:hover {
+  gap: 12px;
+}
+
+/* =========================================================
+   UPCOMING
+   ========================================================= */
+
+.latest-updates-upcoming {
+  padding: 0 0 100px;
+  background: #ffffff;
+}
+
+.latest-updates-upcoming-box {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: center;
+  padding: 42px;
+  background: #182d21;
+  border-radius: 4px;
+}
+
+.latest-updates-upcoming-icon {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(213, 173, 85, 0.4);
+  border-radius: 50%;
+  color: #d5ad55;
+}
+
+.latest-updates-upcoming-box .latest-updates-kicker {
+  margin-bottom: 7px;
+  color: #d5ad55;
+}
+
+.latest-updates-upcoming-box h2 {
+  margin: 0;
+  font-size: 1.65rem;
+  line-height: 1.25;
+  color: #ffffff;
+}
+
+.latest-updates-upcoming-box p {
+  max-width: 680px;
+  margin: 10px 0 0;
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.latest-updates-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 46px;
+  padding: 0 19px;
+  border: 1px solid #d5ad55;
+  border-radius: 3px;
+  background: #d5ad55;
+  color: #17211b;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.latest-updates-button:hover {
+  transform: translateY(-2px);
+  background: #e1bd68;
+  border-color: #e1bd68;
+}
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.latest-updates-cta {
+  padding: 95px 0;
+  text-align: center;
+  background: #f4f6f3;
+}
+
+.latest-updates-cta .latest-updates-kicker {
+  margin-bottom: 16px;
+}
+
+.latest-updates-cta h2 {
+  max-width: 850px;
+  margin: 0 auto 32px;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 750;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  color: #18231c;
+}
+
+.latest-updates-cta .latest-updates-button {
+  display: inline-flex;
+}
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+.latest-updates-page a:focus-visible {
+  outline: 3px solid rgba(213, 173, 85, 0.65);
+  outline-offset: 4px;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 960px) {
+  .latest-updates-container {
+    width: min(100% - 40px, 760px);
+  }
+
+  .latest-updates-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .latest-updates-highlight-grid,
+  .latest-updates-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .latest-updates-upcoming-box {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .latest-updates-upcoming-box .latest-updates-button {
+    grid-column: 2;
+    width: fit-content;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 680px) {
+  .latest-updates-container {
+    width: min(100% - 32px, 560px);
+  }
+
+  .latest-updates-hero {
+    min-height: 390px;
+  }
+
+  .latest-updates-hero .latest-updates-container {
+    padding: 70px 0;
+  }
+
+  .latest-updates-hero h1 {
+    font-size: clamp(2.7rem, 13vw, 4rem);
+  }
+
+  .latest-updates-hero p {
+    margin-top: 22px;
+    font-size: 0.96rem;
+    line-height: 1.7;
+  }
+
+  .latest-updates-intro {
+    padding: 65px 0 55px;
+  }
+
+  .latest-updates-intro h2,
+  .latest-updates-section-heading h2 {
+    font-size: 2rem;
+  }
+
+  .latest-updates-highlights {
+    padding: 65px 0 75px;
+  }
+
+  .latest-updates-highlight-grid,
+  .latest-updates-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .latest-updates-highlight-card {
+    min-height: auto;
+    padding: 27px;
+  }
+
+  .latest-updates-list {
+    padding: 70px 0;
+  }
+
+  .latest-update-card {
+    min-height: 320px;
+    padding: 26px;
+  }
+
+  .latest-updates-upcoming {
+    padding-bottom: 70px;
+  }
+
+  .latest-updates-upcoming-box {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 30px 25px;
+  }
+
+  .latest-updates-upcoming-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .latest-updates-upcoming-box .latest-updates-button {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  .latest-updates-cta {
+    padding: 70px 0;
+  }
+
+  .latest-updates-cta h2 {
+    font-size: 2rem;
+  }
+
+  .latest-updates-cta .latest-updates-button {
+    width: 100%;
+  }
+}

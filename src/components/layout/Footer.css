@@ -1,0 +1,463 @@
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+  position: relative;
+  background: #0d5538;
+  color: #ffffff;
+}
+
+/* =========================================================
+   HORIZONTAL FLAG
+========================================================= */
+
+.site-footer__flag {
+  display: flex;
+  width: 100%;
+  height: 6px;
+  overflow: hidden;
+}
+
+.site-footer__flag span {
+  flex: 1;
+  height: 100%;
+}
+
+.site-footer__flag-green {
+  background: #176847;
+}
+
+.site-footer__flag-yellow {
+  background: #f4df00;
+}
+
+.site-footer__flag-red {
+  background: #e52329;
+}
+
+.site-footer__flag-blue {
+  background: #4678c8;
+}
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.site-footer__content {
+  display: grid;
+  grid-template-columns:
+    minmax(260px, 1.45fr)
+    minmax(140px, 0.75fr)
+    minmax(140px, 0.75fr)
+    minmax(220px, 1fr);
+
+  gap: 60px;
+
+  padding-top: 48px;
+  padding-bottom: 42px;
+}
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.site-footer__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.site-footer__crest-box {
+  display: grid;
+  place-items: center;
+
+  width: 54px;
+  height: 54px;
+
+  padding: 5px;
+
+  border-radius: 7px;
+  background: #ffffff;
+}
+
+.site-footer__crest-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.site-footer__brand-name {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 0.78rem;
+  line-height: 1.25;
+}
+
+.site-footer__brand-name strong {
+  font-weight: 700;
+}
+
+.site-footer__brand-column h2 {
+  margin: 21px 0 12px;
+
+  color: #ffffff;
+
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.site-footer__description {
+  max-width: 330px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.68);
+
+  font-size: 0.74rem;
+  line-height: 1.65;
+}
+
+.site-footer__details {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
+  margin-top: 15px;
+
+  color: rgba(255, 255, 255, 0.67);
+
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+.site-footer__details strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* =========================================================
+   SOCIAL
+========================================================= */
+
+.site-footer__socials {
+  display: flex;
+  gap: 8px;
+
+  margin-top: 18px;
+}
+
+.site-footer__socials a {
+  display: grid;
+  place-items: center;
+
+  width: 31px;
+  height: 31px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 0.58rem;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    color 160ms ease,
+    background 160ms ease;
+}
+
+.site-footer__socials a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+/* =========================================================
+   ORGANISED BY
+========================================================= */
+
+.site-footer__organised {
+  margin-top: 25px;
+  padding-top: 17px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.site-footer__organised > span {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: rgba(255, 255, 255, 0.45);
+
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.site-footer__organised-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.site-footer__organised-list span {
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 0.68rem;
+}
+
+/* =========================================================
+   COLUMNS
+========================================================= */
+
+.site-footer__column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.site-footer__column h3 {
+  margin: 2px 0 18px;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 0.61rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.site-footer__column > a {
+  margin-bottom: 11px;
+
+  color: rgba(255, 255, 255, 0.76);
+
+  font-size: 0.75rem;
+
+  text-decoration: none;
+
+  transition:
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.site-footer__column > a:hover {
+  color: #ffffff;
+  transform: translateX(2px);
+}
+
+/* =========================================================
+   THEME
+========================================================= */
+
+.site-footer__theme {
+  max-width: 225px;
+
+  margin-top: 17px;
+  padding-top: 15px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.site-footer__theme > span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: rgba(255, 255, 255, 0.43);
+
+  font-size: 0.57rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.site-footer__theme p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 0.69rem;
+  line-height: 1.6;
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.site-footer__contact-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+
+  margin-bottom: 13px;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 0.74rem;
+  line-height: 1.55;
+
+  text-decoration: none;
+}
+
+.site-footer__contact-link svg {
+  flex: 0 0 auto;
+
+  margin-top: 3px;
+
+  color: rgba(255, 255, 255, 0.48);
+}
+
+a.site-footer__contact-link:hover {
+  color: #ffffff;
+}
+
+.site-footer__website {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  margin-top: 2px;
+
+  color: #ffffff;
+
+  font-size: 0.7rem;
+
+  text-decoration: none;
+}
+
+.site-footer__website:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   BOTTOM BAR
+========================================================= */
+
+.site-footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+  background: rgba(0, 0, 0, 0.07);
+}
+
+.site-footer__bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 58px;
+
+  gap: 20px;
+}
+
+.site-footer__bottom p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.43);
+
+  font-size: 0.65rem;
+}
+
+.site-footer__legal {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.site-footer__legal a,
+.site-footer__legal button {
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font: inherit;
+  font-size: 0.65rem;
+
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.site-footer__legal span {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.6rem;
+}
+
+.site-footer__legal a:hover,
+.site-footer__legal button:hover {
+  color: #ffffff;
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+  .site-footer__content {
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 42px;
+  }
+
+  .site-footer__contact {
+    grid-column: 2 / 4;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 720px) {
+  .site-footer__content {
+    grid-template-columns: 1fr 1fr;
+    gap: 38px 28px;
+
+    padding-top: 40px;
+    padding-bottom: 35px;
+  }
+
+  .site-footer__brand-column {
+    grid-column: 1 / -1;
+  }
+
+  .site-footer__contact {
+    grid-column: 1 / -1;
+  }
+
+  .site-footer__bottom-inner {
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-footer__content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .site-footer__brand-column,
+  .site-footer__contact {
+    grid-column: auto;
+  }
+
+  .site-footer__flag {
+    height: 5px;
+  }
+
+  .site-footer__legal {
+    flex-wrap: wrap;
+  }
+}

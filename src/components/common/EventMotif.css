@@ -1,0 +1,183 @@
+/* =========================================================
+   EVENT FLAG / FLOW MOTIF
+========================================================= */
+
+.event-motif {
+  position: relative;
+  width: 150px;
+  height: 220px;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+/* ---------------------------------------------------------
+   Individual strokes
+--------------------------------------------------------- */
+
+.motif-stroke {
+  position: absolute;
+  display: block;
+
+  border-radius: 100% 0 100% 0;
+
+  transform-origin: bottom center;
+}
+
+/* GREEN */
+
+.motif-green {
+  left: 8px;
+  bottom: 12px;
+
+  width: 34px;
+  height: 135px;
+
+  background: #176847;
+
+  transform: rotate(-18deg);
+
+  clip-path: polygon(
+    50% 100%,
+    35% 80%,
+    25% 60%,
+    22% 40%,
+    28% 20%,
+    42% 0,
+    55% 25%,
+    62% 50%,
+    58% 75%
+  );
+}
+
+/* YELLOW */
+
+.motif-yellow {
+  left: 35px;
+  bottom: 55px;
+
+  width: 34px;
+  height: 125px;
+
+  background: #f4df00;
+
+  transform: rotate(-14deg);
+
+  clip-path: polygon(
+    50% 100%,
+    36% 82%,
+    27% 63%,
+    24% 45%,
+    29% 27%,
+    42% 0,
+    57% 23%,
+    64% 48%,
+    60% 72%
+  );
+}
+
+/* RED */
+
+.motif-red {
+  left: 62px;
+  bottom: 20px;
+
+  width: 38px;
+  height: 190px;
+
+  background: #e52329;
+
+  transform: rotate(-5deg);
+
+  clip-path: polygon(
+    50% 100%,
+    37% 83%,
+    29% 63%,
+    25% 43%,
+    29% 22%,
+    42% 0,
+    57% 20%,
+    65% 43%,
+    62% 66%
+  );
+}
+
+/* BLUE */
+
+.motif-blue {
+  left: 95px;
+  bottom: 65px;
+
+  width: 34px;
+  height: 140px;
+
+  background: #4678c8;
+
+  transform: rotate(20deg);
+
+  clip-path: polygon(
+    40% 100%,
+    30% 80%,
+    28% 60%,
+    33% 40%,
+    45% 20%,
+    65% 0,
+    60% 25%,
+    52% 48%,
+    45% 72%
+  );
+}
+
+/* =========================================================
+   DECORATIVE VARIANT
+   Used around landing-page sections
+========================================================= */
+
+.event-motif--decorative {
+  position: absolute;
+
+  opacity: 0.11;
+
+  transform: scale(0.9);
+
+  z-index: 0;
+}
+
+/* =========================================================
+   LIGHT VARIANT
+========================================================= */
+
+.event-motif--light {
+  opacity: 0.16;
+}
+
+/* =========================================================
+   SMALL VARIANT
+========================================================= */
+
+.event-motif--small {
+  transform: scale(0.62);
+  transform-origin: center;
+}
+
+/* =========================================================
+   HERO / STRONG VARIANT
+========================================================= */
+
+.event-motif--strong {
+  opacity: 0.95;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .event-motif {
+    width: 105px;
+    height: 155px;
+  }
+
+  .event-motif--decorative {
+    transform: scale(0.65);
+  }
+}
