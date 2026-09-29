@@ -814,3 +814,70 @@ a {
     color: inherit;
   }
 }
+.brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+  min-width: 0;
+  width: max-content;
+  text-decoration: none;
+}
+
+.brand-identity {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 7px;
+  flex-shrink: 0;
+  height: 58px;
+}
+
+.crest {
+  display: block;
+  width: 45px;
+  height: 50px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.brand-divider {
+  display: block;
+  width: 1px;
+  height: 43px;
+  background: #006b3f;
+  flex-shrink: 0;
+}
+
+.service-stripes {
+  display: block;
+  width: 25px;
+  height: 43px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.brand-text strong {
+  display: block;
+  font-size: 11px;
+  line-height: 1.15;
+  color: #17251f;
+}
+
+.brand-text span {
+  display: block;
+  margin-top: 4px;
+  font-size: 8px;
+  line-height: 1.2;
+  color: #78847e;
+}

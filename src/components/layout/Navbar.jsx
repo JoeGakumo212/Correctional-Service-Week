@@ -215,18 +215,24 @@ export default function Navbar() {
             navigateTo('/');
           }}
         >
-          <img
-            src="/images/crest1.webp"
-            alt="Government crest"
-            className="crest"
-          />
+          <div className="brand-identity">
+            <img
+              src="/images/crest1.webp"
+              alt="Arms of Government"
+              className="crest"
+            />
+
+            <span className="brand-divider" aria-hidden="true" />
+
+            <img
+              src="/images/correctional-service-stripes-original.png"
+              alt="Correctional Service Week"
+              className="service-stripes"
+            />
+          </div>
 
           <div className="brand-text">
-            <strong>
-              STATE DEPARTMENT
-              <br />
-              FOR CORRECTIONAL SERVICES
-            </strong>
+            <strong>STATE DEPARTMENT FOR CORRECTIONAL SERVICES</strong>
 
             <span>Rehabilitation • Security • A Safer Society</span>
           </div>
